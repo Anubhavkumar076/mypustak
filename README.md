@@ -3,3 +3,6 @@ leARntalk is social networking site which supports sending messages, images and 
 
 # Platforms used
 In leARntalk, we are using Firebase, Android/java.
+
+# Work in progress
+Push Notification and designing 
