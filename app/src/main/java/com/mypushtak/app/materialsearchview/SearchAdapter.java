@@ -11,18 +11,10 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
 import com.mypushtak.app.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Suggestions Adapter.
- *
- * @author Miguel Catalan Bañuls
- */
 public class SearchAdapter extends BaseAdapter implements Filterable {
 
     private ArrayList<String> data;
