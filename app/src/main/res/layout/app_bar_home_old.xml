@@ -16,9 +16,11 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="50sp"
-                android:background="@color/colorPrimary"
+                android:layout_width="80dp"
+                android:layout_height="30sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/mypustak_logo"
                 app:popupTheme="@style/MainActivity.PopupOverlay" />
 
 

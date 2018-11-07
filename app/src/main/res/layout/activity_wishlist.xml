@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WishlistActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/maintop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:minHeight="?android:attr/actionBarSize" >
+
+        <ImageView
+            android:id="@+id/navigationnn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/clear_icon"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:text="WISHLIST"
+                android:maxLines="1"
+                android:gravity="center_horizontal"
+                android:textColor="#3f3e3e"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_border1"
+        android:layout_width="170dp"
+        android:layout_height="305dp">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:id="@+id/g1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#cdcdcd"
+
+        />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="25dp"
+        android:text="Category"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:background="#ffffff"
+        android:id="@+id/txt"
+        android:textColor="#616161"
+        android:layout_below="@+id/g1"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Bok Name"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/bookname1"
+        android:textColor="#616161"
+        android:layout_below="@+id/txt"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="MRP"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/bookname2"
+        android:textStyle="bold"
+        android:textColor="#616161"
+        android:layout_below="@+id/bookname1"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/bookname3"
+        android:textColor="#616161"
+        android:layout_below="@+id/bookname2"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="10dp" />
+
+
+</RelativeLayout>
+
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/v1"
+            android:background="@color/ash"
+            android:layout_marginTop="260dp"
+            />
+<TextView
+    android:layout_width="wrap_content"
+    android:text="Add to cart"
+    android:textSize="18sp"
+    android:layout_below="@+id/v1"
+    android:layout_marginTop="8dp"
+    android:gravity="center_horizontal"
+    android:layout_marginLeft="50dp"
+    android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="MOVE TO CART"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="#252525"
+            android:textAllCaps="false"
+            android:id="@+id/editid"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SELECT ALL"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="#008cff"
+            android:textAllCaps="false"
+            android:id="@+id/saveid"
+            />
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

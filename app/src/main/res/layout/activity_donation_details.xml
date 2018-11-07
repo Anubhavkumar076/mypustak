@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonationDetails">
+
+
+    <RelativeLayout
+        android:id="@+id/maintop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:minHeight="?android:attr/actionBarSize" >
+
+        <ImageView
+            android:id="@+id/navigationnn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/back_icon"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:text="DONATION DETAILS"
+                android:maxLines="1"
+                android:textColor="#3f3e3e"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/maintop2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:minHeight="?android:attr/actionBarSize" >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:id="@+id/idd"
+                android:text="ID"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/bg_border1" />
+
+
+
+            <Button
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:id="@+id/noofbks"
+                android:text="No of books"
+                android:textAllCaps="false"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/bg_border1" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:id="@+id/status"
+                android:text="Status"
+                android:textAllCaps="false"
+                android:layout_marginLeft="0dp"
+                android:background="@drawable/bg_border1" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mainto3"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/bg_border1"
+        android:minHeight="?android:attr/actionBarSize" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick up Address:"
+            android:id="@+id/pckupadrs"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            />
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_toRightOf="@+id/pckupadrs"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name :"
+        android:id="@+id/name"
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact No:"
+        android:id="@+id/cntno"
+        android:textSize="15dp"
+        />
+</LinearLayout>
+
+
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="122dp"
+            android:background="@color/ash"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="145dp"
+            />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/maintop4"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@+id/mainto3"
+        android:background="@drawable/bg_border1"
+        android:minHeight="?android:attr/actionBarSize" >
+
+
+<ImageView
+    android:layout_width="80dp"
+    android:layout_height="90dp"
+    android:src="@drawable/profile_icon"
+    android:background="@drawable/bg_border1"
+    android:layout_marginLeft="50dp"
+    android:id="@+id/proficon"
+    android:layout_marginTop="10dp"
+    />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Title"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/booktitle"
+            android:layout_toRightOf="@+id/proficon"
+            />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:text="With Mypustak"
+            android:textColor="#008cff"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/booktitle"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_border2"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
