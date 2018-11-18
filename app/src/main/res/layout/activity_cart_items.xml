@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartItemsActivity">
+
+    <RelativeLayout
+        android:id="@+id/maintop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:minHeight="?android:attr/actionBarSize" >
+
+        <ImageView
+            android:id="@+id/navigationnn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/back_icon"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="NO’s OF ITEMS IN CART"
+                android:maxLines="1"
+                android:textColor="#3f3e3e"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="Edit"
+            android:layout_toRightOf="@+id/rl_title"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#008cff"
+            android:background="@drawable/bg_border2"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/r1"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_border1"
+        android:layout_height="160dp">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:id="@+id/img"
+        android:background="#cdcdcd"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/img"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="BOOK TITLE" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="MRP : 224"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="QTY:"/>
+
+    <Spinner
+        android:layout_width="50dp"
+        android:id="@+id/spinner1"
+        android:layout_height="35dp">
+    </Spinner>
+
+
+</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="SHIPPING/HANDELING :"
+        android:textSize="12sp"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_below="@+id/img"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="REMOVE"
+        android:layout_weight="1"
+        android:textColor="#008cff"
+        android:textSize="12sp"
+        android:background="@drawable/bg_border2"
+        />
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="35dp"
+        android:text="MOVE TO WISHLIST"
+        android:layout_marginLeft="10dp"
+        android:textColor="#008cff"
+        android:textSize="12sp"
+        android:background="@drawable/bg_border2"
+        />
+
+</LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:text="PRODUCT LIKE ABOVE"
+    android:textSize="14sp"
+    android:layout_marginTop="20dp"
+    android:gravity="center_horizontal"
+    android:layout_below="@+id/r1"
+    android:id="@+id/t1"
+    android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/t1"
+        android:id="@+id/l2"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="RETURN POLICY"
+            android:textColor="#008cff"
+            android:textSize="12sp"
+            android:background="@drawable/bg_border3"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:text="PREPAID"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:background="#01b9f5"
+                android:textColor="@android:color/white"
+                android:layout_height="35dp" />
+
+
+
+            <Button
+                android:layout_width="0dp"
+                android:text="FASTER"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:background="#000000"
+                android:textColor="@android:color/white"
+                android:layout_height="35dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:text="COD"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:textColor="@android:color/white"
+                android:background="#01b9f5"
+                android:layout_height="35dp" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/maintop2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/l2"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/bg_border1"
+        android:minHeight="?android:attr/actionBarSize" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAYMENT DETAILS"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="12dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COD:"
+                android:layout_marginLeft="170dp"
+                android:textSize="13dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faster:"
+                android:textAllCaps="false"
+                android:layout_marginLeft="157dp"
+                android:textSize="13dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtotal:"
+                android:textAllCaps="false"
+                android:layout_marginLeft="144dp"
+                android:textSize="13dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:background="#01b9f5"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:text="SELECT DEVLIVERY ADDRESS"
+        android:textSize="12sp"
+        android:layout_height="40dp" />
+
+
+
+
+
+
+</RelativeLayout>
