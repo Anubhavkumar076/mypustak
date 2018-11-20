@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+
+<!-- container is cart_item_container-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartItemsActivity">
+    tools:context=".CartItemsActivity"
+    android:background="#f8f8f8">
 
     <RelativeLayout
         android:id="@+id/maintop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@android:color/white"
-        android:minHeight="?android:attr/actionBarSize" >
+        android:minHeight="?android:attr/actionBarSize">
 
         <ImageView
             android:id="@+id/navigationnn"
@@ -21,290 +32,221 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:padding="5dp"
-            android:src="@drawable/back_icon"/>
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/change_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+
+            android:layout_centerVertical="true"
+            android:layout_marginStart="83dp"
+            android:maxLines="1"
+            android:text="NO'S OF ITEMS IN CART"
+            android:textColor="#3f3e3e"
+            android:textSize="18sp" />
 
         <RelativeLayout
             android:id="@+id/rl_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
 
-            <TextView
-                android:id="@+id/profile"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="NO’s OF ITEMS IN CART"
-                android:maxLines="1"
-                android:textColor="#3f3e3e"
-                android:textSize="14sp" />
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+
+                <Button
+                    android:id="@+id/tv_title"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/white_button"
+
+                    android:ellipsize="end"
+                    android:maxEms="6"
+                    android:maxLines="1"
+                    android:text="Edit"
+                    android:textColor="#008cff"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
-
-        <Button
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="Edit"
-            android:layout_toRightOf="@+id/rl_title"
-            android:textAllCaps="false"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="16dp"
-            android:textColor="#008cff"
-            android:background="@drawable/bg_border2"/>
-
-
     </RelativeLayout>
 
-    <RelativeLayout
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:id="@+id/r1"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/bg_border1"
-        android:layout_height="160dp">
+        android:layout_height="match_parent"
+        android:layout_below="@id/maintop"
+        android:id="@+id/cart_items_recycler"
+        android:layout_above="@+id/return_policy"></android.support.v7.widget.RecyclerView>
 
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="90dp"
-        android:id="@+id/img"
-        android:background="#cdcdcd"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp" />
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_toRightOf="@+id/img"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:text="BOOK TITLE" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:text="MRP : 224"/>
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:orientation="horizontal"
-    android:layout_height="wrap_content">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:text="QTY:"/>
-
-    <Spinner
-        android:layout_width="50dp"
-        android:id="@+id/spinner1"
-        android:layout_height="35dp">
-    </Spinner>
-
-
-</LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="SHIPPING/HANDELING :"
-        android:textSize="12sp"
-        android:layout_height="wrap_content" />
-
-
-
-
-
-
-
-
-
-        </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_below="@+id/img"
-    android:layout_marginHorizontal="20dp"
-    android:layout_marginTop="10dp"
-    android:layout_height="wrap_content">
-
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="35dp"
-        android:text="REMOVE"
-        android:layout_weight="1"
+        android:layout_above="@+id/cart_items_linear"
+        android:padding="10dp"
+        android:text="RETURN POLICY"
+        android:gravity="center"
+        android:background="@drawable/white_button"
         android:textColor="#008cff"
-        android:textSize="12sp"
-        android:background="@drawable/bg_border2"
-        />
-
-
-    <Button
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="35dp"
-        android:text="MOVE TO WISHLIST"
-        android:layout_marginLeft="10dp"
-        android:textColor="#008cff"
-        android:textSize="12sp"
-        android:background="@drawable/bg_border2"
-        />
-
-</LinearLayout>
-
-
-
-
-
-    </RelativeLayout>
-
-
-<TextView
-    android:layout_width="match_parent"
-    android:text="PRODUCT LIKE ABOVE"
-    android:textSize="14sp"
-    android:layout_marginTop="20dp"
-    android:gravity="center_horizontal"
-    android:layout_below="@+id/r1"
-    android:id="@+id/t1"
-    android:layout_height="wrap_content" />
-
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/return_policy"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_below="@+id/t1"
-        android:id="@+id/l2"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_above="@id/cart_items_relative"
+        android:background="@drawable/blue_button"
+        android:id="@+id/cart_items_linear"
+        >
 
         <Button
-            android:layout_width="match_parent"
-            android:text="RETURN POLICY"
-            android:textColor="#008cff"
-            android:textSize="12sp"
-            android:background="@drawable/bg_border3"
-            android:layout_height="40dp" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="PREPAID"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/cart_items_prepaid_button"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-
-
-            <Button
-                android:layout_width="0dp"
-                android:text="PREPAID"
-                android:layout_weight="1"
-                android:textSize="11sp"
-                android:background="#01b9f5"
-                android:textColor="@android:color/white"
-                android:layout_height="35dp" />
-
-
-
-            <Button
-                android:layout_width="0dp"
-                android:text="FASTER"
-                android:layout_weight="1"
-                android:textSize="11sp"
-                android:background="#000000"
-                android:textColor="@android:color/white"
-                android:layout_height="35dp" />
-
-            <Button
-                android:layout_width="0dp"
-                android:text="COD"
-                android:layout_weight="1"
-                android:textSize="11sp"
-                android:textColor="@android:color/white"
-                android:background="#01b9f5"
-                android:layout_height="35dp" />
-
-
-
-        </LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/black_button"
+            android:text="FASTER"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/cart_items_faster_button"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_button"
+            android:text="COD"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/cart_items_cod_button"/>
     </LinearLayout>
 
+
     <RelativeLayout
-        android:id="@+id/maintop2"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/l2"
-        android:layout_marginTop="1dp"
-        android:background="@drawable/bg_border1"
-        android:minHeight="?android:attr/actionBarSize" >
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cart_items_delivery_address"
+        android:background="@drawable/grey_border_box"
+        android:id="@+id/cart_items_relative"
+        android:padding="10dp"
+        android:layout_margin="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PAYMENT DETAILS"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="12dp"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/cart_items_textView"/>
 
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_marginTop="25dp"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_items_textView"
+            android:text="COD:"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="100dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/cart_items_cod_textView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_items_textView"
+            android:text="Price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/cart_items_cod"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_items_cod"
+            android:text="Faster:"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="100dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/cart_items_faster_textView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_items_cod"
+            android:text="Price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/cart_items_faster"/>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="COD:"
-                android:layout_marginLeft="170dp"
-                android:textSize="13dp"
-                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_items_faster"
+            android:text="Subtotal:"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="100dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/cart_items_subtotal_textview"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Faster:"
-                android:textAllCaps="false"
-                android:layout_marginLeft="157dp"
-                android:textSize="13dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Subtotal:"
-                android:textAllCaps="false"
-                android:layout_marginLeft="144dp"
-                android:textSize="13dp"
-                />
-
-
-        </LinearLayout>
-
-
-
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_items_faster"
+            android:text="Price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/cart_items_subtotal"/>
 
     </RelativeLayout>
 
+
     <Button
         android:layout_width="match_parent"
-        android:background="#01b9f5"
+        android:layout_height="wrap_content"
+        android:id="@+id/cart_items_delivery_address"
         android:layout_alignParentBottom="true"
-        android:textColor="@android:color/white"
-        android:text="SELECT DEVLIVERY ADDRESS"
-        android:textSize="12sp"
-        android:layout_height="40dp" />
-
-
-
-
-
+        android:background="@drawable/blue_button"
+        android:text="SECLECT DELIVERY ADDRESS"
+        android:textColor="@color/white"
+        android:textAlignment="center"/>
 
 </RelativeLayout>

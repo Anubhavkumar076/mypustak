@@ -1,21 +1,22 @@
-package com.mypushtak.app;
+package com.mypushtak.app.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Adapter;
+import android.widget.LinearLayout;
 
-import com.mypushtak.app.Adapters.CartItemsAdapter;
 import com.mypushtak.app.Adapters.MyOrderAdapter;
-
+import com.mypushtak.app.R;
 
 /*
-****@author Anubhav Kumar
-* *****
+ ****@author Anubhav Kumar
+ * *****
  */
 
-public class CartItemsActivity extends AppCompatActivity {
+public class MyOrders extends AppCompatActivity {
 
     private RecyclerView mRecylerView;
     private RecyclerView.Adapter mAdapter;
@@ -27,18 +28,17 @@ public class CartItemsActivity extends AppCompatActivity {
             ,R.drawable.abc,R.drawable.abc,R.drawable.abc,R.drawable.abc,R.drawable.abc,R.drawable.abc,R.drawable.abc
 
     };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart_items);
-        mRecylerView=findViewById(R.id.cart_items_recycler);
+        setContentView(R.layout.activity_my_orders);
 
+        mRecylerView=findViewById(R.id.myorders_recylerview);
         mRecylerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLinearLayout=new LinearLayoutManager(this);
         mRecylerView.setLayoutManager(mLinearLayout);
         Log.d("unique","activity");
-        mAdapter=new CartItemsAdapter(this,lettersicon,letterlist);
+        mAdapter=new MyOrderAdapter(this,lettersicon,letterlist);
         mRecylerView.setAdapter(mAdapter);
         Log.d("unique","activity2");
     }

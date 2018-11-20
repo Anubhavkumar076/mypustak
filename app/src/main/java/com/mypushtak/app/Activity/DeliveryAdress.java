@@ -1,4 +1,4 @@
-package com.mypushtak.app;
+package com.mypushtak.app.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,16 +6,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.mypushtak.app.Adapters.CartItemsAdapter;
+import com.mypushtak.app.Adapters.DeliveryAddressAdapter;
 import com.mypushtak.app.Adapters.MyOrderAdapter;
-
+import com.mypushtak.app.R;
 
 /*
-****@author Anubhav Kumar
-* *****
+ ****@author Anubhav Kumar
+ * *****
  */
 
-public class CartItemsActivity extends AppCompatActivity {
+public class DeliveryAdress extends AppCompatActivity {
 
     private RecyclerView mRecylerView;
     private RecyclerView.Adapter mAdapter;
@@ -31,14 +31,13 @@ public class CartItemsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart_items);
-        mRecylerView=findViewById(R.id.cart_items_recycler);
-
+        setContentView(R.layout.activity_delivery_adress);
+        mRecylerView=findViewById(R.id.address_recyclerview);
         mRecylerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLinearLayout=new LinearLayoutManager(this);
         mRecylerView.setLayoutManager(mLinearLayout);
         Log.d("unique","activity");
-        mAdapter=new CartItemsAdapter(this,lettersicon,letterlist);
+        mAdapter=new DeliveryAddressAdapter(this,letterlist);
         mRecylerView.setAdapter(mAdapter);
         Log.d("unique","activity2");
     }

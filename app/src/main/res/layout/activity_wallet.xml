@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Wallet">
-
-
+    tools:context=".Activity.WalletActivity">
 
     <RelativeLayout
         android:id="@+id/maintop"
@@ -14,7 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@android:color/white"
-        android:minHeight="?android:attr/actionBarSize" >
+        android:minHeight="?android:attr/actionBarSize"
+        android:padding="10dp"
+        >
 
         <ImageView
             android:id="@+id/navigationnn"
@@ -25,119 +32,111 @@
             android:padding="5dp"
             android:src="@drawable/back_icon"/>
 
-        <RelativeLayout
-            android:id="@+id/rl_title"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="WALLET"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:gravity="center_horizontal"
-            >
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20.5sp"/>
 
-            <TextView
-                android:id="@+id/profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
-                android:maxEms="6"
-                android:text="WALLET"
-                android:maxLines="1"
-                android:textColor="#3f3e3e"
-                android:textSize="20sp" />
 
-        </RelativeLayout>
     </RelativeLayout>
 
+
     <RelativeLayout
-        android:id="@+id/maintop3"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="80dp"
-        android:layout_alignParentTop="true"
-        android:minHeight="?android:attr/actionBarSize" >
-
-
+        android:layout_height="180dp"
+        android:layout_below="@id/maintop"
+        android:id="@+id/wallet_relative"
+        android:background="#f8f8f8">
         <EditText
             android:layout_width="120dp"
-            android:layout_height="2dp"
-android:layout_marginLeft="40dp"
-            android:id="@+id/v1"
-            android:layout_marginTop="80dp"
-
-            />
-        <view
-            android:layout_width="120dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="60dp"
+            android:shadowColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:id="@+id/wallet_edittext"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAlignment="center"
             />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="ADD MONEY"
-            android:textColor="@android:color/white"
-            android:background="#01b9f5"
-            android:layout_toRightOf="@+id/v1"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
-            />
+            android:background="@drawable/blue_button"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/wallet_edittext"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"/>
 
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:id="@+id/maintop2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="210dp"
-        android:background="@drawable/bg_border1"
-        android:minHeight="?android:attr/actionBarSize" >
+        android:layout_height="75dp"
+        android:layout_below="@id/wallet_relative"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/wallet_linear">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="amount Added:"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:textSize="18dp"
-            />
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Amount Added: "
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"/>
+
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:text="Closing Amount:"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="170dp"
-            android:textSize="18dp"
-            />
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"/>
 
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="80dp"
-            android:background="@color/ash"
-            android:layout_marginLeft="160dp"
-            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:id="@+id/wallet_grey"
+        android:layout_below="@id/wallet_linear"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/ash"
-            android:layout_marginTop="80dp"
-            />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/wallet_transaction_id"
+    android:layout_below="@+id/wallet_grey"
+    android:text="Transaction id:"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:textStyle="bold"
+    android:textColor="#000"
+    android:padding="10dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Transaction id:"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="15dp"
-            android:textSize="18dp"
-            />
-
-
-
-    </RelativeLayout>
 </RelativeLayout>

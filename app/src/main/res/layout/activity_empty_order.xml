@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.EmptyOrder">
+
+
+
+    <RelativeLayout
+        android:id="@+id/maintop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:minHeight="?android:attr/actionBarSize" >
+
+        <ImageView
+            android:id="@+id/navigationnn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/cross"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:text="ORDERS"
+                android:maxLines="1"
+                android:textColor="#3f3e3e"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/change_password_container"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_border1"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="22.5sp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="3.5sp"
+            tools:text="NO ACTIVE "
+            android:id="@+id/noactive"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="19.5sp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="6.5sp"
+            tools:text="There are no recent  orders to show"
+            android:layout_below="@+id/noactive"
+            android:id="@+id/noactivetext"
+            android:textAlignment="center"
+            />
+        
+        <ImageView
+            android:layout_width="69dp"
+            android:layout_height="65.5dp"
+            android:layout_below="@+id/noactivetext"
+            android:id="@+id/image"
+            android:src="@drawable/layer_5"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Book"
+            android:id="@+id/empty_order_book"
+            android:background="@drawable/white_button"
+            android:textColor="#008cff"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:layout_below="@id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

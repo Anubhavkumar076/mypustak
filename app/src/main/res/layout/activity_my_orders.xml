@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- RECYCLERVIEW CONTAINER OF THIS LAYOUT IS ORDERS_CONTAINER-->
+<!--
+****
+@author: Anubhav Kumar
+****
+-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyOrders">
+    tools:context=".Activity.MyOrders">
 
     <RelativeLayout
         android:id="@+id/maintop"
@@ -16,25 +24,21 @@
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/navigationnn"
+            android:id="@+id/myorders_navigation"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:padding="5dp"
-            android:src="@drawable/back_icon"/>
-
+            android:src="@drawable/cross"/>
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="MY ORDERS"
-            android:textSize="13sp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content" />
-
-
-
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:textColor="#000"/>
 
         <RelativeLayout
             android:id="@+id/rl_title"
@@ -44,10 +48,11 @@
             android:layout_alignParentEnd="true" >
 
             <ImageView
-                android:id="@+id/tv_title"
+                android:id="@+id/myorders_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:ellipsize="end"
                 android:maxEms="6"
 
@@ -61,271 +66,18 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="3dp"
-                android:onClick="movetoorderdetails"
-                android:layout_toRightOf="@+id/tv_title"
+                android:layout_toRightOf="@+id/myorders_search"
+                android:id="@+id/myorders_cart"
                 android:src="@drawable/cart_add_icon" />
 
         </RelativeLayout>
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:id="@+id/maintop2"
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="255dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        android:minHeight="?android:attr/actionBarSize" >
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/ash"
-            android:layout_marginTop="0dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Order id:"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="18dp"
-            android:textSize="14dp"
-            />
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/ash"
-            android:layout_marginTop="30dp"
-            />
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="35dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="order Date:"
-                android:layout_marginLeft="15dp"
-                android:textSize="14dp"
-                />
-
-
-            <View
-                android:layout_width="2dp"
-                android:layout_height="26dp"
-                android:id="@+id/v12"
-                android:layout_marginStart="60dp"
-                android:layout_marginEnd="-10dp"
-                android:background="@color/ash" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Delivery By:"
-                android:layout_marginLeft="20dp"
-                android:textSize="14dp"
-                />
-
-        </LinearLayout>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:id="@+id/v11"
-            android:background="@color/ash"
-            android:layout_marginTop="60dp" />
-
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_below="@+id/v11"
-            android:background="@color/ash"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/img"
-            android:layout_marginTop="10dp"
-            android:layout_height="60dp" />
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_toRightOf="@+id/img"
-            android:orientation="vertical"
-            android:layout_below="@id/v11"
-            android:id="@+id/l11"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="MRP:"
-                android:textSize="12sp"
-                android:layout_marginLeft="90dp"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Shipping/Handling:"
-                android:textSize="12sp"
-                android:layout_marginLeft="20dp"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="COD/Fast Delivery:"
-                android:textSize="12sp"
-                android:layout_marginLeft="20dp"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Coupon Discount:"
-                android:textSize="12sp"
-                android:layout_marginLeft="25dp"
-                android:layout_height="wrap_content" />
-
-
-
-
-
-        </LinearLayout>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_below="@+id/l11"
-            android:background="@color/ash"
-            android:id="@+id/v13"
-            android:layout_marginTop="10dp"
-            />
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_below="@+id/v13"
-    android:layout_marginTop="3dp"
-    android:id="@+id/l12"
-    android:layout_height="wrap_content">
-
-<TextView
-    android:layout_width="wrap_content"
-    android:text="Status:"
-    android:layout_marginLeft="20dp"
-    android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Total:"
-        android:layout_marginLeft="130dp"
-        android:layout_height="wrap_content" />
-
-</LinearLayout>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_below="@+id/l12"
-            android:background="@color/ash"
-            android:id="@+id/v14"
-            android:layout_marginTop="5dp"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_below="@+id/v14"
-            android:id="@+id/l13"
-            android:layout_height="40dp">
-
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Edit"
-                android:layout_weight="1"
-                android:textColor="@android:color/white"
-                android:background="#252525"
-                android:textAllCaps="false"
-                android:id="@+id/editid"
-                />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Save"
-                android:layout_weight="1"
-                android:textColor="@android:color/white"
-                android:background="#008cff"
-                android:textAllCaps="false"
-                android:id="@+id/saveid"
-                />
-
-
-
-
-        </LinearLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_below="@+id/l13"
-    android:id="@+id/l14"
-    android:layout_height="35dp">
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="40dp"
-        android:layout_gravity="center_vertical"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/layer_8"
-
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Refund of"
-            android:textSize="12sp"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="10dp"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Credited to wallet:"
-        android:layout_marginLeft="30dp"
-        android:layout_gravity="center_vertical"
-        android:layout_height="wrap_content" />
-
-
-
-</LinearLayout>
-
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_below="@+id/l14"
-            android:background="@color/ash"
-            android:id="@+id/v15" />
-
-
-
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@id/maintop"
+        android:id="@+id/myorders_recylerview"></android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
